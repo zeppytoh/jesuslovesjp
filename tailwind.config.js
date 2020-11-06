@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      minHeight: {
+        "screen-75": "75vh",
+      },
+      fontSize: {
+        "55": "55rem",
+      },
+      opacity: {
+        "80": ".8",
+      },
       colors: {
         'accent-1': '#333',
       }
