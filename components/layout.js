@@ -2,12 +2,15 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
+import Nav from '../components/nav'
 
 const name = "Victor Toh"
 export const siteTitle = name+"'s Website"
 
 export default function Layout({ children, home }) {
   return (
+    <>
+          <Nav />
     <div className={styles.container} >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -24,6 +27,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -62,5 +66,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    </>
   )
 }
