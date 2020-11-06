@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import Link from 'next/link'
-
+import { Button } from "@chakra-ui/core";
 export default function God() {
   return (
     <Layout>
@@ -20,6 +19,7 @@ export default function God() {
         
         Back to <Link href="/"><a>home</a></Link>
     </h2>
+    <Button><Link href="/">Back to home</Link></Button>
     </Layout>
   )
 }

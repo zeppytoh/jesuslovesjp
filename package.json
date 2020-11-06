@@ -8,13 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-rc.8",
-    "@emotion/core": "^10.1.1",
-    "@emotion/styled": "^10.0.27",
+    "@chakra-ui/core": "next",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
-    "emotion-theming": "^10.0.27",
-    "framer-motion": "^2.9.4",
+    "framer-motion": "latest",
     "gray-matter": "^4.0.2",
     "next": "10.0.0",
     "postcss-flexbugs-fixes": "^5.0.0",

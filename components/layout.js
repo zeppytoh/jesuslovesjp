@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Nav from '../components/nav'
+import { Button, Heading, Link } from "@chakra-ui/core";
 
 const name = "Victor Toh"
 export const siteTitle = name+"'s Website"
@@ -10,8 +10,8 @@ export const siteTitle = name+"'s Website"
 export default function Layout({ children, home }) {
   return (
     <>
-          <Nav />
-    <div className={styles.container} >
+    <Nav />
+    <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Heading as="h1" size="xl">{name}</Heading>
           </>
         ) : (
           <>
@@ -50,8 +50,8 @@ export default function Layout({ children, home }) {
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+              <Link color="brand.500" href="/">
+                <Button>{name}</Button>
               </Link>
             </h2>
           </>
@@ -61,7 +61,7 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <Button>← Back to home</Button>
           </Link>
         </div>
       )}
