@@ -16,7 +16,6 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <div className={`bg-pan-left gradient-bg`}>
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
@@ -45,6 +44,5 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
     </Layout>
-    </div>
   )
 }
