@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import { siteTitle } from '../components/layout'
+import LandingLayout from "../components/LandingLayout"
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import { Heading, Link } from '@chakra-ui/core'
@@ -16,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <LandingLayout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -50,6 +51,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </LandingLayout>
   )
 }
