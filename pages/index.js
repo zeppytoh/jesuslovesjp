@@ -6,6 +6,7 @@ import { getSortedPostsData } from '../lib/posts'
 import { Heading, Link } from '@chakra-ui/core'
 import Date from '../components/date'
 
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -51,6 +52,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      
     </LandingLayout>
   )
 }

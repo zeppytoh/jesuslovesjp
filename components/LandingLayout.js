@@ -1,5 +1,6 @@
 import React from "react"
 import { Flex } from "@chakra-ui/core"
+import { Layout } from "layout"
 
 export default function LandingLayout(props) {
   return (

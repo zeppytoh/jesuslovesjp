@@ -17,7 +17,7 @@ export default function Nav() {
       px={2}
       py={3}
       zIndex="50"
-      bg="gray.100"
+      bg="brand.100"
       align="center"
       justify="between"
       position="sticky" 
@@ -40,9 +40,7 @@ export default function Nav() {
               JesusLoves.jp
             </a>
           </Link>
-          <Button>
-            <Icon name="check-circle" size="24px" />
-          </Button>
+
         </Flex>
         <Flex>
 

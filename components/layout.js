@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Nav from '../components/nav'
+import Image from 'next/image'
+
 import { Button, Heading, Link } from "@chakra-ui/core";
 
 const name = "Victor Toh"
@@ -31,10 +33,11 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <img
+            <Image
               src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
+              width={200}
+              height={200}
             />
             <Heading as="h1" size="xl">{name}</Heading>
           </>
@@ -42,16 +45,17 @@ export default function Layout({ children, home }) {
           <>
             <Link href="/">
               <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
+              <Image
+              src="/images/profile.jpg"
+              alt={name}
+              width={100}
+              height={100}
+            />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link color="brand.500" href="/">
-                <Button>{name}</Button>
+            <h2>
+              <Link href="/">
+                <Button bgColor="brand.500">{name}</Button>
               </Link>
             </h2>
           </>
